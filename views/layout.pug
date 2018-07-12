@@ -16,6 +16,12 @@ body
       li.nav-item.active
       a.nav-link(href='/articles/add') Add Article
 .container
+     //'message' = message from message.pug
+     != messages('message', locals)
+     if errors
+      each error, i in errors
+        div(class="alert alert-danger") #{error.msg}
+      
      block content
      br
      hr
