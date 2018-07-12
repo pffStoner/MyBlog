@@ -71,8 +71,10 @@ app.get('/', (req, res) => {
 
 //route files
 let articles = require('./routes/article');
+let users = require('./routes/users');
 //everything that goesto to /articles
 app.use('/articles', articles);
+app.use('/users/', users);
 
 
 
